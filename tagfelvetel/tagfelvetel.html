@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kratochwill Balázs">
+    <meta name="description"
+        content="A Husi diák szervezet tegfelvételének oldala. Lehet sport ág quiz-t kitölteni és jelentkezni.">
+
+    <title>HUSI Tag felvétel</title>
+    <link rel="stylesheet" type="text/css" href="tagfelvetel.css">
+    <link rel="shortcut icon" href="../altalanos/sifavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Potta+One&display=swap"
+        rel="stylesheet">
+    <style>
+        label.error {
+            color: #FB3A3A;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="fejlec">
+            <img src="../altalanos/logo2.png" alt="logo" class="logo">
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Kezdőlap</a></li>
+                    <li><a href="../rolunk/rolunk.html">Rólunk</a></li>
+                    <li><a href="#">Tagfelvétel</a></li>
+                    <li><a href="../programok/programok.html">Programok</a></li>
+                    <li><a href="../kapcsolat/kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="hatterdiv">
+
+        <aside>
+            <h1>Sportág ajánló</h1>
+            <div class="quiz">
+                <h2 id="question">Kérdés 1</h2>
+                <div id="answer-buttons">
+                    <button class="btn">Válasz 1</button>
+                    <button class="btn">Válasz 2</button>
+                    <button class="btn">Válasz 3</button>
+                    <button class="btn">Válasz 4</button>
+                </div>
+                <button id="next-btn">Következő</button>
+            </div>
+
+        </aside>
+    </div>
+    <hr>
+    <article>
+    <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="urlap">
+        <div class="cim">
+            <h1>Jelentkezés</h1>
+            <h2>Legyél te is HUSI!</h2>
+        </div>
+        <div class="fontos">
+            <div class="urlap1">
+
+                <div class="szemelyes">
+                    <label for="vnev">
+                        <p>Vezetéknév</p>
+                    </label>
+                    <input type="text" name="veznev" class="kerdes" id="vnev" placeholder="Vezetéknév:"><br>
+                    <label for="knev">
+                        <p>Keresztnév</p>
+                    </label>
+                    <input type="text" name="kernev" class="kerdes" id="knev" placeholder="Keresztnév:"><br>
+                    <label for="szulev">
+                        <p>Születés dátuma</p>
+                    </label>
+                    <input type="text" name="kor" class="kerdes" id="szulev" placeholder="23/05/1997 (dd/mm/yyyy)"><br>
+                    <label for="neptunkod">
+                        <p>Neptun kódod</p>
+                    </label>
+                    <input type="password" name="neptun" class="kerdes" id="neptunkod" placeholder="Neptun kód"><br>
+                    <label for="tlszm">
+                        <p>Telefonszámod</p>
+                    </label>
+                    <input type="tel" name="telszam" class="kerdes" id="tlszm" value="+36"><br>
+                    <label for="mail">
+                        <p>Email címed</p>
+                    </label>
+                    <input type="email" name="email" class="kerdes" id="mail" placeholder="Email címed">
+                    <br>
+                    <input type="checkbox" name="elfogad" class="boxi" id="elfog" value="i">
+                    <label for="elfog">
+                        <p>Elfogadom az
+                            adatkezelési nyilatkozatot.</p>
+                    </label>
+                </div>
+
+                <div class="mellekes">
+                    <p>Melyik egyetemre jársz?</p>
+                    <input type="radio" class="radioa" id="cor" name="egyetem" value="c"><label for="cor">Budapesti
+                        Corvinus<br></label>
+                    <input type="radio" class="radioa" id="elt" name="egyetem" value="e"><label
+                        for="elt">Elte<br></label>
+                    <input type="radio" class="radioa" id="mas" name="egyetem" value="m"><label for="mas">Más
+                        egyetemre<br></label>
+                    <input type="radio" class="radioa" id="nem" name="egyetem" value="n"><label for="nem">Nem vagyok
+                        egyetemista<br><br></label>
+                    <label for="hny">
+                        <p id="hanyadeves"> Hanyad éves hallgató vagy?</p>
+                    </label><br>
+                    <select class="selecto" size="1" name="evfolyam" id="hny">
+                        <option value="1">Elsőéves</option>
+                        <option value="2">Másodéves</option>
+                        <option value="3">Harmadéves</option>
+                        <option value="4">Negyedéves</option>
+                        <option value="5">Ötödéves</option>
+                        <option value="5+">Magasabb éves</option>
+                        <option value="0">Nem vagyok egyetemista</option>
+
+                    </select>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="sporturlap">
+                <h2>Segíts, hogy jobban megismerjünk!</h2>
+                <label for="mly">
+                    <p>Melyik sport jött ki a sportág ajánlón?</p>
+                </label>
+                <select class="selecto" size="1" name="sportag" id="mly">
+                    <option value="si">Sí</option>
+                    <option value="kor">Korcsolya</option>
+                    <option value="lab">Labdarúgás</option>
+                    <option value="rop">Röplabda</option>
+                    <option value="kez">Kézilabda</option>
+                    <option value="kos">Kosárlabda</option>
+                </select>
+                <p>
+                    <label for="bax">Mesélj magadról bátran:</label><br>
+                    <textarea placeholder="Üzeneted:" id="bax"></textarea>
+                </p>
+            </div>
+        </div>
+        <div class="gombok">
+            <input type="reset" class="gomb" id="torol" value="Törlés">
+            <input type="submit" class="gomb" id="kuld" name="bekuldve" value="Jelentkezem">
+
+        </div>
+
+
+    </form>
+</article>
+    <hr>
+
+
+
+
+    <footer>
+        <div class="footerContainer">
+            <div class="mediaikonok">
+                <a href="https://www.facebook.com/profile.php?id=100013738835351"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kratochwill_balazs/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/watch?v=xgO-yorgzD0"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="../index.html">Kezdőlap</a></li>
+                    <li><a href="../rolunk/rolunk.html">Rólunk</a></li>
+                    <li><a href="#">Tagfelvétel</a></li>
+                    <li><a href="../programok/programok.html">Programok</a></li>
+                    <li><a href="../kapcsolat/kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Keresztény Síelők</span></p>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./tagfelvetel/costum.js"></script>
+    <script src="tagfelvetel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#urlap").validate({
+                rules: {
+                    veznev: "required",
+                    kernev: "required",
+                    neptun: "required",
+                    kor: {
+                        required: true,
+                        minlength: 10,
+                    },
+                    telszam:{
+                        required: true,
+                        minlength: 10,
+
+                    } ,
+                    email: "required",
+                    elfogad: "required",
+
+                },
+                messages: {
+                    veznev: "Kötelező mező!",
+                    kernev: "Kötelező mező!",
+                    neptun: "Kötelező mező!",
+                    kor: {
+                        required: "Kötelező mező!",
+                        minlength: "Nemmegfelő a dátum formátumod!",
+                    },
+                    telszam: "Érvényes telefonszámot adj meg",
+                    email: "Adj meg egy létező email címet!",
+                    elfogad: "A jelentkezéshez fogadd el az adatkezelési szabályzatot!",
+
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
